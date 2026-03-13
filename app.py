@@ -23,7 +23,7 @@ def chat():
         conversations[player_id] = [conversations[player_id][0]] + conversations[player_id][-19:]
 
     response = client.chat.completions.create(
-        model="llama3-8b-8192",
+        model="llama-3.3-70b-versatile",
         messages=conversations[player_id],
         max_tokens=150
     )
